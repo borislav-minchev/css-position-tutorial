@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Position Tutorial</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Source+Sans+Pro">
+	<link rel="stylesheet" href="index.css" />
+	<script src="index.js"></script>
+</head>
+<body>
+
+	<div class="box box-fixed">
+		<h5>This is a fixed box. It sticks to the screen.</h5>
+	</div>
+
+	<div class="box box-absolute">
+			<h5>This is an absolute box. First it is positioned according to the screen. Then it scrolls along with the page.</h5>
+	</div>
+
+	<div class="relative-container">
+		<div class="box box-relative-initial">This is a relative box's original position.</div>
+		<div class="box box-relative">
+			This is the actual relative box.
+			It is positioned relatively to it's original position, while the original position itself still takes up space.</div>
+	</div>
+
+
+	<button class="btn">PRESS ME</button>
+
+</body>
+</html>
