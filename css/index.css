@@ -6,11 +6,7 @@ body {
 	-webkit-user-select: none;
 	user-select: none;
 	cursor: default;
-	height: 2000px;
-}
-
-.text {
-	text-align: center;
+	height: 200vh;
 }
 
 /*
@@ -19,14 +15,18 @@ font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
 
+.text {
+	text-align: center;
+}
+
 .box {
 	width: 250px;
 	height: 250px;
 	margin: 20px;
 	box-sizing: border-box;
 	overflow: hidden;
-	box-shadow: 0 20px 50px rgb(23, 32, 90);
 	border: 2px solid #2a3cad;
+	background: #111845a6;
 	padding: 10px;
 	color: white;
 	-webkit-transition: all 0.5s ease;
@@ -34,52 +34,66 @@ font-family: 'Roboto', sans-serif;
 	transition: all 0.5s ease;
 }
 
-.box-fixed {
-	position: fixed;
-	background: #111845a6;
-	top: 0;
-	left: 0;
-}
-
-.box-fixed:hover {
-	transform: scale(1.2) translate(5%, 5%);
+.box.hover {
+	-webkit-box-shadow: 0px 0px 100px 20px rgba(23, 32, 90, 1);
+	-moz-box-shadow: 0px 0px 100px 20px rgba(23, 32, 90, 1);
+	box-shadow: 0px 0px 100px 20px rgba(23, 32, 90, 1);
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+
+.box-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.no-event {
+  pointer-events: none;
+}
+
+.box-fixed.hover {
+	transform: scale(1.1) translate(5%, 5%);
+}
+
+.box-absolute.hover {
+	transform: scale(1.1) translate(-5%, -5%);
 }
 
 .box-absolute {
 	position: absolute;
 	font-size: 0.8em;
-	background: #111845a6;
 	bottom: 0;
 	right: 0;
 }
 
-.box-absolute:hover {
-	transform: scale(1.2) translate(-5%, -5%);
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
 .relative-container {
-	position: fixed;
-	bottom: 0;
-	left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .box-relative-initial {
 	background-color: cornflowerblue;
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	top: 0;
+	right: 0;
 }
 
 .box-relative {
 	position: relative;
-	background-color: cornflowerblue;
-	left: 500px;
+	font-size: 0.8em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.box-relative.hover {
+	transform: scale(1.1) translate(0, -5%);
+	transform: translate(-30vw, 0);
+
 }
 
 .box span {
@@ -108,13 +122,14 @@ font-family: 'Roboto', sans-serif;
 	transform: rotate(270deg);
 }
 
-.box span:before {
+.box.hover span:before {
 	content: '';
 	position: absolute;
 	width: 100%;
 	height: 2px;
+	opacity: 0.5;
 	background: #50dfdb;
-	animation: animate 10s linear infinite;
+	animation: animate 5s linear infinite;
 }
 
 @keyframes animate {

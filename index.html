@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./css/index.css" />
 	<script src="./js/index.js"></script>
 </head>
-<body>
+<body onload="index.onLoad()">
 
 		<div class="box box-fixed">
 			<span></span>
@@ -31,36 +31,23 @@
 			</h2>
 		</div>
 
-
+		<div class="relative-container">
+			<div class="box box-relative-initial">
+				This is a relative box's original position.
+			</div>
+			<div class="box box-relative">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<h2 class="text">
+					This is the actual relative box.
+					It is positioned relatively to it's original position, while the original position itself still takes up space
+				</h2>
+			</div>
+		</div>
 
 		<!--
-
-				<div class="box box-absolute">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<h2>My animated Border</h2>
-			<p>
-				<h5>.</h5>
-
-			</p>
-		</div>
-
-		<div class="box">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<h2>My animated Border</h2>
-			<p>
-				<h5 class="text">
-					All our modules are designed to play nicely with responsive of
-					course. At the end of the day it comes down to the theme you use -
-					our code doesn't get in your way.
-				</h5>
-			</p>
-		</div>
 
 
 		<div class="relative-container">
